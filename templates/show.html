@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ .Title |html }}</title>
+  </head>
+  <body>
+	  <p>received image:<br/>
+		  {{ range .Images }}
+			  <img src="data:image/jpg;base64,{{ . }}" /><br />
+		  {{ end }}
+	  </p>
+  </body>
+</html>
